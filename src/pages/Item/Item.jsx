@@ -16,12 +16,6 @@ const ItemLisContainer = ({}) => {
       })
       .catch((error) => console.log(error));
   }, []);
-  // useEffect(() => {
-  //   const filtroProductos = products.filter(
-  //     (product) => product.category === category
-  //   );
-  //   setProducts(filtroProductos);
-  // }, [category]);
   useEffect (()=>{
     if(category){
       const removeCaracter=category.includes('%20')
