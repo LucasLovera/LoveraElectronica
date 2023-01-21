@@ -8,7 +8,7 @@ function Item({producto}) {
       <Card.Img variant="top" src={producto.image} />
       <Card.Body>
         <Card.Title>{producto.title}</Card.Title>
-        <Card.Text>
+        <Card.Text>$
         {producto.price}
         </Card.Text> 
         <Link key={producto.id} to={`/item/${producto.id}`}>
