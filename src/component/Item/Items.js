@@ -12,7 +12,7 @@ function Item({producto}) {
         {producto.price}
         </Card.Text> 
         <Link key={producto.id} to={`/item/${producto.id}`}>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">VER MAS</Button>
         </Link>
       </Card.Body>
     </Card>

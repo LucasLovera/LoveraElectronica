@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .counter {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .add-to-cart-button {
+    margin-left: 10px;
+  }

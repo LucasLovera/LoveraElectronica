@@ -1,20 +1,26 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../../ItemDetail/ItemDetailMap";
-const ItemDetailContainer = ({}) => {
+import { getFirestore, doc, getDoc } from "firebase/firestore";
+
+const ItemDetailContainer = () => {
   const [products, setProducts] = useState({});
-   const {id}= useParams();
-  const getProduct =  fetch(`https://fakestoreapi.com/products/${id}`, { method: 'GET' ,});
+  const { id } = useParams();
+ 
+  const getProducts = ()=> {
+    const db = getFirestore();
+    const querySnapshot= doc(db, "products", id)
+    getDoc(querySnapshot)
+    .then((reponse)=>{
+      setProducts({id: reponse.id, ...reponse.data()})
+
+    })
+    .catch((error)=>{console.log(error)})
+  }
   useEffect(() => {
-   getProduct
-      .then((res) => {
-        return res.json();
-      })
-      .then((reponse) => {
-        setProducts(reponse);
-      })
-      .catch((error) => console.log(error));
-  }, []);
+    getProducts();
+  }, [id]);
+
   return (
     <div>
       <ItemDetail productos={products} />

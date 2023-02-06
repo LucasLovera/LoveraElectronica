@@ -3,66 +3,39 @@ import { CartWidget } from "./CartWidget";
 import { NavLink } from "react-router-dom";
 import "./StyleNavBar.css";
 
-function NavBar() {
-  return (
-    <Nav fill variant="tabs" defaultActiveKey="/home">
-      <Nav.Item>
-        <Nav.Link>
-          <NavLink
-            className={({ isActive }) => (isActive ? "active" : "inactive")}
-            to="/"
-          >
-            Home
-          </NavLink>
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-1">
-          <NavLink
-            className={({ isActive }) => (isActive ? "active" : "inactive")}
-            to="category/electronics"
-          >
-            Electronica{" "}
-          </NavLink>
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-2">
-          <NavLink
-            className={({ isActive }) => (isActive ? "active" : "inactive")}
-            to="category/jewelery"
-          >
-            Joyas{" "}
-          </NavLink>
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-3">
-          <NavLink
-            className={({ isActive }) => (isActive ? "active" : "inactive")}
-            to="category/men's clothing"
-          >
-            Ropa de Hombre{" "}
-          </NavLink>
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-4">
-          <NavLink
-            className={({ isActive }) => (isActive ? "active" : "inactive")}
-            to="category/women's clothing"
-          >
-            Ropa de mujer{" "}
-          </NavLink>
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-5">
-          <CartWidget />
-        </Nav.Link>
-      </Nav.Item>
-    </Nav>
-  );
-}
+const NavBar = () => (
+  <Nav fill variant="tabs" defaultActiveKey="/home">
+    <Nav.Item>
+      <NavLink className="nav-link" to="/">
+        Home
+      </NavLink>
+    </Nav.Item>
+    <Nav.Item>
+      <NavLink className="nav-link" to="category/electronics">
+        Electronica
+      </NavLink>
+    </Nav.Item>
+    <Nav.Item>
+      <NavLink className="nav-link" to="category/jewelery">
+        Joyas
+      </NavLink>
+    </Nav.Item>
+    <Nav.Item>
+      <NavLink className="nav-link" to="category/men's clothing">
+        Ropa de Hombre
+      </NavLink>
+    </Nav.Item>
+    <Nav.Item>
+      <NavLink className="nav-link" to="category/women's clothing">
+        Ropa de mujer
+      </NavLink>
+    </Nav.Item>
+    <Nav.Item>
+      <NavLink className="nav-link" to="/cart">
+        <CartWidget />
+      </NavLink>
+    </Nav.Item>
+  </Nav>
+);
 
 export default NavBar;
