@@ -6,7 +6,7 @@ import { cartContext } from "../context/cartContext";
 function  ItemDetaill({producto}) {
 const [contador, setContador]= useState(1);
 const {addItem} = useContext(cartContext)
-const stock = 4 ;
+const stock = producto.stock
   return (
     <div className='card'>
       <img  className='detailImage' src={producto.image} alt="" />

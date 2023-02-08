@@ -2,21 +2,19 @@
 import './ItemCount.css';
 
 const ItemCount = ({contador, setContador, stock}) => {
-    const onAdd = () => {
-        if (stock === contador) {
-          alert('No hay Stock Disponible');
-          return;
-        }
-        setContador(contador + 1);
-      };
-    
-      const onDecrement = () => {
-        if (0 === contador) {
-          return;
-        }
-        setContador(contador - 1);
-      };
-    
+  const onAdd = () => {
+    if (stock === contador) {
+      return;
+    }
+    setContador(contador + 1);
+  };
+
+  const onDecrement = () => {
+    if (0 === contador) {
+      return;
+    }
+    setContador(contador - 1);
+  };
 
   return (
     <div className="container">
@@ -24,10 +22,11 @@ const ItemCount = ({contador, setContador, stock}) => {
         -
       </button>
       <div className="counter">{contador}</div>
-      <button className="button" onClick={onAdd} disabled={contador === stock}>
-        +
-      </button>
-     
+      {contador === stock ? null : (
+        <button className="button" onClick={onAdd}>
+          +
+        </button>
+      )}
     </div>
   );
 };

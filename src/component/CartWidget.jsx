@@ -14,7 +14,7 @@ export const CartWidget = () => {
   }, [cart]);
   return (
     <div>
-      <i class="bi bi-cart3"></i>
+      <i className="bi bi-cart3"></i>
       <Badge bg="primary" pill>
         {total}
       </Badge>
