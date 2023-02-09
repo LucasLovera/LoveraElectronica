@@ -1,13 +1,18 @@
 import React from 'react';
 import './StyleBrand.css';
+import { CartWidget } from "./CartWidget";
+import { NavLink } from "react-router-dom";
 
 function Brand() {
   return (
     <div className="brand-container">
       <h1 className="brand-title">
-        Lovera <span className="brand-subtitle">Electrónica</span>
+      808 Controladores 
       </h1>
-    </div>
+      <NavLink className="nav-link2" to="/cart">
+        <CartWidget />
+        </NavLink>
+        </div>
   );
 }
 

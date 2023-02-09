@@ -11,23 +11,23 @@ const NavBar = () => (
       </NavLink>
     </Nav.Item>
     <Nav.Item>
-      <NavLink className="nav-link" to="category/electronics">
-        Electronica
+      <NavLink className="nav-link" to="category/akai">
+        Akai
       </NavLink>
     </Nav.Item>
     <Nav.Item>
-      <NavLink className="nav-link" to="category/jewelery">
-        Joyas
+      <NavLink className="nav-link" to="category/arturia">
+        Arturia
       </NavLink>
     </Nav.Item>
     <Nav.Item>
-      <NavLink className="nav-link" to="category/men's clothing">
-        Ropa de Hombre
+      <NavLink className="nav-link" to="category/korg">
+        Korg
       </NavLink>
     </Nav.Item>
     <Nav.Item>
-      <NavLink className="nav-link" to="category/women's clothing">
-        Ropa de mujer
+      <NavLink className="nav-link" to="category/nektar">
+        Nektar
       </NavLink>
     </Nav.Item>
     <Nav.Item>

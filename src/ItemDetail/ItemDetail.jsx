@@ -8,7 +8,7 @@ const [contador, setContador]= useState(1);
 const {addItem} = useContext(cartContext)
 const stock = producto.stock
   return (
-    <div className='card'>
+    <div className='card w-50 m-auto mt-3'>
       <img  className='detailImage' src={producto.image} alt="" />
       <h2>{producto.title}</h2>
       <p>{producto.description}</p>

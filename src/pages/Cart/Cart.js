@@ -1,6 +1,12 @@
 import { cartContext } from "../../context/cartContext";
 import { useContext, useState } from "react";
-import { collection, addDoc, getFirestore, updateDoc, doc } from "firebase/firestore";
+import {
+  collection,
+  addDoc,
+  getFirestore,
+  updateDoc,
+  doc,
+} from "firebase/firestore";
 import "./Cart.css";
 
 const Cart = () => {
@@ -8,7 +14,7 @@ const Cart = () => {
   const [buyer, setBuyer] = useState({ name: "", email: "", phone: "" });
 
   if (cart.length === 0) {
-    return <h1> Carrito vacio </h1>;
+    return <h1 className="m-5"> Carrito vacio </h1>;
   }
 
   const handleSubmit = (e) => {
@@ -40,19 +46,26 @@ const Cart = () => {
       console.log(response.id);
     });
   };
+  const total = cart.reduce((acc, curr) => acc + curr.price * curr.quantity, 0);
   return (
-
-    <div>
+    <div className=" m-5">
       <div className="cart-container">
         <ul className="cart-list">
           {cart.map((product) => (
             <li key={product.id} className="cart-item">
-              <img src={product.image} alt={product.name} className="cart-img" />
+              <img
+                src={product.image}
+                alt={product.name}
+                className="cart-img"
+              />
               <div className="cart-details">
                 <p className="cart-name">{product.name}</p>
-                <p className="cart-price">{product.price}</p>
-                <p className="cart-quantity">{product.quantity}</p>
-                <button onClick={() => removeItem(product.id)} className="cart-remove-button">
+                <p className="cart-price">${product.price}</p>
+                <p className="cart-quantity">Cantidad ={product.quantity}</p>
+                <button
+                  onClick={() => removeItem(product.id)}
+                  className="cart-remove-button"
+                >
                   Eliminar del Carrito
                 </button>
               </div>
@@ -60,10 +73,14 @@ const Cart = () => {
           ))}
         </ul>
         <div className="cart-clear-container">
-          <button onClick={() => clear()} className="cart-clear-button"> Vaciar Carrito</button>
+          <button onClick={() => clear()} className="cart-clear-button">
+            {" "}
+            Vaciar Carrito
+          </button>
         </div>
       </div>
-      <form onSubmit={handleSubmit} className="cart-form">
+      <h1 className="m-3">Total = $ {total}</h1>
+      <form onSubmit={handleSubmit} className="cart-form w-50 ">
         <input
           type="text"
           name="fullName"
@@ -88,9 +105,16 @@ const Cart = () => {
           onChange={(e) => setBuyer({ ...buyer, phone: e.target.value })}
           className="cart-form-input"
         />
-        <button onClick={() => comprar()} type="submit" className="cart-form-button">Comprar</button>
+
+        <button
+          onClick={() => comprar()}
+          type="submit"
+          className="cart-form-button"
+        >
+          Comprar
+        </button>
       </form>
     </div>
   );
-          }
-          export default Cart
+};
+export default Cart;
