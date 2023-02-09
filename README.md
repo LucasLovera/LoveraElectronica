@@ -7,3 +7,5 @@ Esperamos que les guste el sitio web y que disfruten de la experiencia de compra
 
 Atentamente,
 Lucas Lovera
+
+ ![808 (3)](https://user-images.githubusercontent.com/112523234/217956496-77c550af-37db-45b2-bb85-d62119dd90c2.gif)
