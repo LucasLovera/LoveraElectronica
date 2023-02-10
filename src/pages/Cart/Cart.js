@@ -72,6 +72,7 @@ const Cart = () => {
             </li>
           ))}
         </ul>
+        <div>
         <div className="cart-clear-container">
           <button onClick={() => clear()} className="cart-clear-button">
             {" "}
@@ -80,6 +81,7 @@ const Cart = () => {
         </div>
       </div>
       <h1 className="m-3">Total = $ {total}</h1>
+      </div>
       <form onSubmit={handleSubmit} className="cart-form w-50 ">
         <input
           type="text"
