@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
   const [loading, setLoading] = useState(true);
   const getProducts = () => {
     const db = getFirestore();
-    const querySnapshot = doc(db, "products", id);
+    const querySnapshot = doc(db, "items", id);
     getDoc(querySnapshot)
       .then((reponse) => {
         setProducts({ id: reponse.id, ...reponse.data() });

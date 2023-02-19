@@ -17,7 +17,7 @@ const ItemListContainer = ({}) => {
 
   const getProducts = () => {
     const db = getFirestore();
-    const querySnapshot = collection(db, "products");
+    const querySnapshot = collection(db, "items");
     if (category) {
       console.log(category)
       const newConfiguration = query(

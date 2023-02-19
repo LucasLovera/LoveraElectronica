@@ -32,7 +32,7 @@ const Cart = () => {
 
     const updateStockProducts = () => {
       cart.forEach((product) => {
-        const querySnapshot = doc(db, "products", product.id);
+        const querySnapshot = doc(db, "items", product.id);
         updateDoc(querySnapshot, {
           stock: product.stock - product.quantity,
         })
@@ -53,7 +53,7 @@ const Cart = () => {
           {cart.map((product) => (
             <li key={product.id} className="cart-item">
               <img
-                src={product.image}
+                src={`/storeImage/${product.image}.jpg`}
                 alt={product.name}
                 className="cart-img"
               />
