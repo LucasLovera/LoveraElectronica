@@ -17,6 +17,8 @@
 .detailImage {
   border-radius: 0% !important;
   transition: none !important;
+  width: 100%!important;
+  object-fit:contain!important
 }
 .card img {
   width: 250px;

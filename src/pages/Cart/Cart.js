@@ -43,8 +43,7 @@ const Cart = () => {
 
     addDoc(querySnapshot, newOrder).then((response) => {
       updateStockProducts();
-      console.log(response.id);
-    });
+      });
   };
   const total = cart.reduce((acc, curr) => acc + curr.price * curr.quantity, 0);
   return (
