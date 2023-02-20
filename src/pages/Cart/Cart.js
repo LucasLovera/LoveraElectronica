@@ -53,7 +53,7 @@ const Cart = () => {
           {cart.map((product) => (
             <li key={product.id} className="cart-item">
               <img
-                src={`/storeImage/${product.image}.jpg`}
+                src={product.image}
                 alt={product.name}
                 className="cart-img"
               />

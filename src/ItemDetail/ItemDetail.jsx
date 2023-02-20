@@ -9,7 +9,7 @@ const {addItem} = useContext(cartContext)
 const stock = producto.stock
   return (
     <div className='card w-50 m-auto mt-3'>
-      <img  className='detailImage' src={`/storeImage/${producto.image}.jpg`} alt="" />
+      <img  className='detailImage' src={producto.image} alt="" />
       <h2>{producto.title}</h2>
       <p>{producto.description}</p>
       <p>Precio: ${producto.price}</p>

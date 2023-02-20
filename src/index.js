@@ -5,18 +5,20 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // Import the functions you need from the SDKs you need
+// Import the functions you need from the SDKs you need
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBp4c3g8pSl5StO3jpyeITEsMy19SCi0es",
-  authDomain: "controladoresmidi-6f12d.firebaseapp.com",
-  projectId: "controladoresmidi-6f12d",
-  storageBucket: "controladoresmidi-6f12d.appspot.com",
-  messagingSenderId: "1030083814634",
-  appId: "1:1030083814634:web:f2e9127e0407ea3dde6393"
+  apiKey: "AIzaSyA_XFNLE5P4j7aeeSIq0tSJu4DLix7wcIU",
+  authDomain: "midi-393fe.firebaseapp.com",
+  projectId: "midi-393fe",
+  storageBucket: "midi-393fe.appspot.com",
+  messagingSenderId: "273105147201",
+  appId: "1:273105147201:web:025503f6ab043de82a3dc0"
 };
 
 // Initialize Firebase
