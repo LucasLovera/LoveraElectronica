@@ -5,7 +5,7 @@ function BrandImage() {
     <div>
       <img
         className="w-100"
-        src="https://www.akaipro.com/media/catalog/category/controllers_category_banner_2000x600_knockout.png"
+        src="https://www.akaipro.com/assets/images/category/mpc-series-catg-img.jpg"
         alt=""
       />
     </div>
